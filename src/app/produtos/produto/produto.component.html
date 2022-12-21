@@ -1,0 +1,36 @@
+<section class="product__container">
+    <div class="product-image__container">
+        <img [src]="produto?.imagem" alt="" >
+    </div>
+    <div class="product-description__container">
+        <h2 class="product__name">
+           {{produto?.descricao}}
+        </h2>
+        <h3 class="product__price">
+            {{produto?.preco | currency:"BRL"}}
+        </h3>
+        <p>Estoque disponível</p>
+        <label for="">
+            Quantidade:
+            <input type="number" [(ngModel)]="quantidade" min="1">
+            unidade(s)
+            *ngIf="produto"
+            <!--[max] ="produto.quantidadeEstoque"-->
+
+        </label>  
+        <p class="product__avaiability">
+            {{ produto?.quantidadeEstoque}} unidade(s) em estoque
+        </p>
+        <button (click)="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+    </div>
+</section>
+
+<!-- o que significa o ?
+
+Esse ponto de interrogação se chama Encadeamento opcional, onde, só iremos acessar aquela propriedade se ela existir, seria como se perguntassemos ao JavaScript:
+
+"Javascript, o objeto comentarios existe? Se sim, eu gostaria de acessar a propriedade text".
+
+Ou seja, caso comentarios for um valor válido, que não retorne null ou undefined, iremos acessar a propriedade desejada. Utilizamos esse [encadeamento opcional] para evitar erros, pois pode ser que no momento que 
+a comentarios ainda não tenha sido preenchido.
+-->

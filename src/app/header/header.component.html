@@ -1,0 +1,58 @@
+<header class="main-header">
+    <h1 class="main-header__title">
+        <span class="main-header__title--blue" >Proway</span><span class="main-header__title--orange">Computers</span>
+    </h1>
+
+    <div class="container-menu">
+        <nav>
+            <ul class="main-header__menu ul ">
+                <li>
+                    <a href="">Produtos</a>
+                   
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Carrinho
+                        <!--não funcionou com isso aqui embaixo,e o prof usou, é só um fundinho preto mesmo-->
+                        <span class="badge-carrinho">{{ carrinhoService.obterCarrinho().length}}</span>
+                        
+                    </a>
+                    
+                </li>
+
+
+                
+                <li>
+                    <a href="">Contato</a>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-facebook"></i>
+                </li>                     
+                <li>
+                    <i class="fa-brands fa-instagram"></i>
+                </li>
+                <li>
+                    <i class="fa-brands fa-linkedin"></i>
+                </li>
+    
+            </ul>
+        </nav>
+    
+   
+        <app-barra-pesquisa></app-barra-pesquisa>
+
+        <!--search bar--jogado la no componente barra-pesquisa
+        <form class="search-form">
+            <input type="text" class="search-form input">
+            <button class="search-form button"><i class="fa-brands fa-searchengin"></i></button>
+        </form>
+
+        -->
+    </div>
+   
+    
+</header>
